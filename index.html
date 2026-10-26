@@ -115,7 +115,14 @@
   /* contact */
   .contact{background:var(--light);position:relative;overflow:hidden}
   .contact .blob.b3{width:300px;height:300px;background:#a7f3d0;top:-80px;left:10%;opacity:.3}
-  .contact-in{position:relative;max-width:1100px;margin:0 auto;padding:90px 24px;text-align:center}
+  .coffee-cut{flex:0 1 340px;position:relative;animation:floaty 6s ease-in-out infinite;filter:drop-shadow(0 18px 34px rgba(0,0,0,.35)) drop-shadow(0 0 36px rgba(255,80,170,.35))}
+.coffee-cut img{width:100%;display:block}
+.coffee-cut .heart{position:absolute;font-size:26px;filter:drop-shadow(0 0 10px rgba(255,80,170,.8))}
+.coffee-cut .h1{top:6%;left:4%;animation:twinkle 2.2s ease-in-out infinite}
+.coffee-cut .h2{top:18%;right:2%;animation:twinkle 2.8s ease-in-out .5s infinite}
+.coffee-cut .h3{bottom:26%;left:-4%;animation:twinkle 3.2s ease-in-out 1s infinite}
+@keyframes twinkle{0%,100%{opacity:.3;transform:scale(.8)}50%{opacity:1;transform:scale(1.25)}}
+.contact-in{position:relative;max-width:1100px;margin:0 auto;padding:90px 24px;text-align:center}
   .contact .script{font-family:'Dancing Script',cursive;font-size:2rem;color:var(--violet)}
   .contact h2{font-size:clamp(2.2rem,5.5vw,3.6rem);margin:8px 0 14px}
   .contact p{color:var(--muted);margin-bottom:30px}
@@ -299,7 +306,9 @@
 
 <section class="contact" id="coffee">
   <div class="blob b3"></div>
-  <div class="contact-in" style="max-width:760px;position:relative">    <div class="script">buy me a coffee ☕</div>
+  <div class="contact-in" style="max-width:760px;position:relative">    <div class="coffee-cut"><span class="heart h1">💗</span><span class="heart h2">💕</span><span class="heart h3">💖</span><img src="coffee.png" alt="Aamna Hanfi"></div>
+    <div style="flex:1 1 460px;min-width:300px">
+    <div class="script">buy me a coffee ☕</div>
     <h2 style="font-size:1.6rem">support with a tip — every bit of crypto lands as a gift 💜</h2>
     <p style="opacity:.7;margin:10px 0 22px">tap an address to copy it</p>
     <div style="display:grid;gap:12px;text-align:left">
@@ -312,6 +321,7 @@
       <button onclick="cp(this,'u13cnj22u4ffwzr9d7yzk4493ud7z3ajmnq2482t4vu9yxycy6uydfrpc9r2ddjvpzhn95wg0eefe35ctkjercvpeeg4mkwahnh6mww3u4h44efs99kpefz7g4f35lputwn8nd96nmtgyqxu6szjjz060s7esc2laatj4rx4dtn597dekt')" style="all:unset;cursor:pointer;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px 18px;display:block">
         <b style="color:var(--pink)"><svg width="16" height="16" viewBox="0 0 24 24" style="vertical-align:-3px"><circle cx="12" cy="12" r="10" fill="#F4B728"/><path fill="#fff" d="M8 7h8v2.5l-4.5 5H16V17H8v-2.5l4.5-5H8z"/></svg> ZEC</b><br><span style="font-size:.8rem;word-break:break-all">u13cnj22u4ffwzr9d7yzk4493ud7z3ajmnq2482t4vu9yxycy6uydfrpc9r2ddjvpzhn95wg0eefe35ctkjercvpeeg4mkwahnh6mww3u4h44efs99kpefz7g4f35lputwn8nd96nmtgyqxu6szjjz060s7esc2laatj4rx4dtn597dekt</span>
       </button>
+    </div>
     </div>
   </div>
 </section>
